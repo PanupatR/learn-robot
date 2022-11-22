@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221122 20:58:32.806" rpa="false" schemaversion="3">
+<suite id="s1" name="Ex001" source="C:\Users\Panupat\desktop\robot-framework\ex001.robot">
+<test id="s1-t1" name="TC-001 Verify that when input correct username and password then user can login" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>file:///C:/Users/Panupat/Desktop/ep01/ex01.html</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221122 20:58:33.031" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Panupat/Desktop/ep01/ex01.html'.</msg>
+<status status="PASS" starttime="20221122 20:58:33.030" endtime="20221122 20:58:34.312"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@v='user']</arg>
+<arg>TestUser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221122 20:58:34.314" level="INFO">Typing text 'TestUser' into text field 'xpath=//input[@v='user']'.</msg>
+<status status="PASS" starttime="20221122 20:58:34.313" endtime="20221122 20:58:34.415"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@v='password']</arg>
+<arg>TestUserPassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221122 20:58:34.416" level="INFO">Typing password into text field 'xpath=//input[@v='password']'.</msg>
+<msg timestamp="20221122 20:58:34.453" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221122 20:58:34.491" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221122 20:58:34.415" endtime="20221122 20:58:34.491"/>
+</kw>
+<status status="PASS" starttime="20221122 20:58:33.029" endtime="20221122 20:58:34.492"/>
+</test>
+<status status="PASS" starttime="20221122 20:58:32.807" endtime="20221122 20:58:34.495"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ex001">Ex001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
