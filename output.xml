@@ -1,40 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221123 11:40:16.216" rpa="false" schemaversion="3">
-<suite id="s1" name="Ex006" source="C:\Users\Panupat\desktop\robot-framework\ex006.robot">
-<test id="s1-t1" name=" TC-005 Verify that when input correct username and password then user can login" line="9">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221123 12:32:18.294" rpa="false" schemaversion="3">
+<suite id="s1" name="Basic Assignment" source="C:\Users\Panupat\desktop\robot-framework\basic_assignment.robot">
+<test id="s1-t1" name="TC-001 Input Username,Password and Nickname" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>file:///C:/Users/Panupat/Desktop/ep01/ex06.html</arg>
-<arg>browser=chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221123 11:40:16.417" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Panupat/Desktop/ep01/ex06.html'.</msg>
-<status status="PASS" starttime="20221123 11:40:16.415" endtime="20221123 11:40:17.623"/>
+<msg timestamp="20221123 12:32:18.494" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Panupat/Desktop/ep01/ep01_small_excercise.html'.</msg>
+<status status="PASS" starttime="20221123 12:32:18.494" endtime="20221123 12:32:19.648"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221123 12:32:21.650" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221123 12:32:19.649" endtime="20221123 12:32:21.650"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//div[@k='abc'and@p='xyz']/input</arg>
-<arg>TestUser</arg>
+<arg>id=username-box</arg>
+<arg>testUser</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221123 11:40:17.624" level="INFO">Typing text 'TestUser' into text field 'xpath=//div[@k='abc'and@p='xyz']/input'.</msg>
-<status status="PASS" starttime="20221123 11:40:17.623" endtime="20221123 11:40:17.730"/>
+<msg timestamp="20221123 12:32:21.651" level="INFO">Typing text 'testUser' into text field 'id=username-box'.</msg>
+<status status="PASS" starttime="20221123 12:32:21.650" endtime="20221123 12:32:21.747"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>xpath=//div[@k='abc']/input</arg>
-<arg>TestUserPassword</arg>
+<arg>xpath=//div[@v='password']/input</arg>
+<arg>testPassword</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20221123 11:40:17.731" level="INFO">Typing password into text field 'xpath=//div[@k='abc']/input'.</msg>
-<msg timestamp="20221123 11:40:17.757" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20221123 11:40:17.793" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20221123 11:40:17.731" endtime="20221123 11:40:17.793"/>
+<msg timestamp="20221123 12:32:21.748" level="INFO">Typing password into text field 'xpath=//div[@v='password']/input'.</msg>
+<msg timestamp="20221123 12:32:21.800" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221123 12:32:21.832" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221123 12:32:21.747" endtime="20221123 12:32:21.832"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//div[@p='xyz']/input</arg>
-<arg>UserName</arg>
+<arg>xpath=//div/input[@doppio='nickname']</arg>
+<arg>imUser</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221123 11:40:17.794" level="INFO">Typing text 'UserName' into text field 'xpath=//div[@p='xyz']/input'.</msg>
-<status status="PASS" starttime="20221123 11:40:17.794" endtime="20221123 11:40:17.852"/>
+<msg timestamp="20221123 12:32:21.834" level="INFO">Typing text 'imUser' into text field 'xpath=//div/input[@doppio='nickname']'.</msg>
+<status status="PASS" starttime="20221123 12:32:21.833" endtime="20221123 12:32:21.899"/>
 </kw>
-<status status="PASS" starttime="20221123 11:40:16.415" endtime="20221123 11:40:17.853"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221123 12:32:23.900" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221123 12:32:21.900" endtime="20221123 12:32:23.900"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath=//select[@id="company"]</arg>
+<arg>doppio</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20221123 12:32:23.901" level="INFO">Selecting options from selection list 'xpath=//select[@id="company"]' by value doppio.</msg>
+<status status="PASS" starttime="20221123 12:32:23.900" endtime="20221123 12:32:23.961"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:op1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221123 12:32:23.962" level="INFO">Clicking element 'id:op1'.</msg>
+<status status="PASS" starttime="20221123 12:32:23.961" endtime="20221123 12:32:24.001"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221123 12:32:26.003" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221123 12:32:24.001" endtime="20221123 12:32:26.003"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:use-me</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221123 12:32:26.004" level="INFO">Clicking element 'id:use-me'.</msg>
+<status status="PASS" starttime="20221123 12:32:26.004" endtime="20221123 12:32:26.040"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221123 12:32:28.042" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221123 12:32:26.041" endtime="20221123 12:32:28.042"/>
+</kw>
+<status status="PASS" starttime="20221123 12:32:18.493" endtime="20221123 12:32:28.043"/>
 </test>
-<status status="PASS" starttime="20221123 11:40:16.217" endtime="20221123 11:40:17.854"/>
+<status status="PASS" starttime="20221123 12:32:18.295" endtime="20221123 12:32:28.044"/>
 </suite>
 <statistics>
 <total>
@@ -43,7 +86,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Ex006">Ex006</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Basic Assignment">Basic Assignment</stat>
 </suite>
 </statistics>
 <errors>
