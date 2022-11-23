@@ -11,7 +11,7 @@ TC-00 Verify that when input correct username and password then user can login
 	Input Text    id=username-box    TestUser
 	Input Password    id=password-box    TestUserPassword
 	   
-	
+	# learn how to use normal case.
 	
 
 

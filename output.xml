@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221122 21:15:58.358" rpa="false" schemaversion="3">
-<suite id="s1" name="Ex002" source="C:\Users\Panupat\desktop\robot-framework\ex002.robot">
-<test id="s1-t1" name="TC-002 Verify that when input correct username and password then user can login" line="9">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221123 11:40:16.216" rpa="false" schemaversion="3">
+<suite id="s1" name="Ex006" source="C:\Users\Panupat\desktop\robot-framework\ex006.robot">
+<test id="s1-t1" name=" TC-005 Verify that when input correct username and password then user can login" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>file:///C:/Users/Panupat/Desktop/ep01/ex02.html</arg>
+<arg>file:///C:/Users/Panupat/Desktop/ep01/ex06.html</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221122 21:15:58.566" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Panupat/Desktop/ep01/ex02.html'.</msg>
-<status status="PASS" starttime="20221122 21:15:58.566" endtime="20221122 21:15:59.859"/>
+<msg timestamp="20221123 11:40:16.417" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Panupat/Desktop/ep01/ex06.html'.</msg>
+<status status="PASS" starttime="20221123 11:40:16.415" endtime="20221123 11:40:17.623"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//div[@v='username']/input</arg>
+<arg>xpath=//div[@k='abc'and@p='xyz']/input</arg>
 <arg>TestUser</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221122 21:15:59.860" level="INFO">Typing text 'TestUser' into text field 'xpath=//div[@v='username']/input'.</msg>
-<status status="PASS" starttime="20221122 21:15:59.859" endtime="20221122 21:15:59.968"/>
+<msg timestamp="20221123 11:40:17.624" level="INFO">Typing text 'TestUser' into text field 'xpath=//div[@k='abc'and@p='xyz']/input'.</msg>
+<status status="PASS" starttime="20221123 11:40:17.623" endtime="20221123 11:40:17.730"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>xpath=//div[@v='password']/input</arg>
+<arg>xpath=//div[@k='abc']/input</arg>
 <arg>TestUserPassword</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20221122 21:15:59.969" level="INFO">Typing password into text field 'xpath=//div[@v='password']/input'.</msg>
-<msg timestamp="20221122 21:16:00.107" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20221122 21:16:00.174" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20221122 21:15:59.968" endtime="20221122 21:16:00.175"/>
+<msg timestamp="20221123 11:40:17.731" level="INFO">Typing password into text field 'xpath=//div[@k='abc']/input'.</msg>
+<msg timestamp="20221123 11:40:17.757" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221123 11:40:17.793" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221123 11:40:17.731" endtime="20221123 11:40:17.793"/>
 </kw>
-<status status="PASS" starttime="20221122 21:15:58.565" endtime="20221122 21:16:00.175"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//div[@p='xyz']/input</arg>
+<arg>UserName</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221123 11:40:17.794" level="INFO">Typing text 'UserName' into text field 'xpath=//div[@p='xyz']/input'.</msg>
+<status status="PASS" starttime="20221123 11:40:17.794" endtime="20221123 11:40:17.852"/>
+</kw>
+<status status="PASS" starttime="20221123 11:40:16.415" endtime="20221123 11:40:17.853"/>
 </test>
-<status status="PASS" starttime="20221122 21:15:58.360" endtime="20221122 21:16:00.177"/>
+<status status="PASS" starttime="20221123 11:40:16.217" endtime="20221123 11:40:17.854"/>
 </suite>
 <statistics>
 <total>
@@ -36,7 +43,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Ex002">Ex002</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ex006">Ex006</stat>
 </suite>
 </statistics>
 <errors>

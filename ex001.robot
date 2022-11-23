@@ -11,7 +11,7 @@ TC-001 Verify that when input correct username and password then user can login
 	Input Text    xpath=//input[@v='user']    TestUser
 	Input Password    xpath=//input[@v='password']    TestUserPassword
 	   
-	
+	# learn how to use learn attribute.
 	
 
 
